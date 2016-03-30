@@ -1,0 +1,8 @@
+language: clojure
+sudo: required
+dist: trusty
+jdk:
+  - oraclejdk8
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y AtomicParsley
