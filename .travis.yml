@@ -6,5 +6,5 @@ jdk:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y AtomicParsley
-  - which atomicparsley
-script: atomicparsley -h
+  - which AtomicParsley
+script: AtomicParsley -h
