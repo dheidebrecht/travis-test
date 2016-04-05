@@ -5,6 +5,11 @@ jdk:
   - oraclejdk8
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y AtomicParsley
-  - which AtomicParsley
-script: AtomicParsley -h
+  - git clone https://github.com/skyebook/FFmpeg.git
+  - cd FFmpeg
+  - git checkout release/3.0
+  - ./configure --enable-static --enable-gpl --enable-nonfree --enable-gnutls --enable-libx264 --enable-pthreads
+  - make
+  - make install
+  - which ffmpeg
+  script: ffmpeg -h
