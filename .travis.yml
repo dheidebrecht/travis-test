@@ -1,8 +1,6 @@
-language: clojure
+language: c
 sudo: required
 dist: trusty
-jdk:
-  - oraclejdk8
 before_install:
   - sudo apt-get -qq update
   - git clone https://github.com/skyebook/FFmpeg.git
